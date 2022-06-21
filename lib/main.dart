@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:suka_healing/pages/auth/login_page.dart';
 import 'package:suka_healing/pages/auth/register_page.dart';
 import 'package:suka_healing/pages/splash_page.dart';
@@ -14,7 +15,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
       routes: {
         '/': (context) => const SplashPage(),
         '/login': (context) => const LoginPage(),
