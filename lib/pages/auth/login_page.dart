@@ -153,7 +153,7 @@ class LoginPage extends StatelessWidget {
             style: GoogleFonts.poppins(),
           ),
           TextButton(
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamed(context, '/register'),
               child: Text(
                 'Register',
                 style: GoogleFonts.poppins(),
