@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:suka_healing/pages/auth/login_page.dart';
 import 'package:suka_healing/pages/auth/register_page.dart';
+import 'package:suka_healing/pages/home/main_page.dart';
 import 'package:suka_healing/pages/splash_page.dart';
 
 void main() {
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const SplashPage(),
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
+        '/main': (context) => const MainPages(),
       },
     );
   }

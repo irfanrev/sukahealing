@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:suka_healing/theme.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -8,15 +9,15 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget header() {
       return Container(
-        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+        margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'Sign In',
               style: GoogleFonts.poppins(
-                fontSize: 22,
-                color: Colors.greenAccent,
+                fontSize: 24,
+                color: primaryText,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -24,6 +25,7 @@ class LoginPage extends StatelessWidget {
               'Silahkan Sing In menggunakan email',
               style: GoogleFonts.poppins(
                 fontSize: 16,
+                color: secondaryText,
                 fontWeight: FontWeight.w400,
               ),
             )
@@ -34,7 +36,7 @@ class LoginPage extends StatelessWidget {
 
     Widget emailTitle() {
       return Container(
-        margin: const EdgeInsets.only(left: 20, right: 20, top: 30, bottom: 20),
+        margin: const EdgeInsets.only(left: 30, right: 30, top: 30, bottom: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -42,6 +44,7 @@ class LoginPage extends StatelessWidget {
               'Email Address',
               style: GoogleFonts.poppins(
                 fontSize: 18,
+                color: primaryText,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -53,11 +56,15 @@ class LoginPage extends StatelessWidget {
               height: 50,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Colors.grey[300],
+                color: Colors.white,
               ),
               child: Row(
                 children: const [
-                  Icon(Icons.email),
+                  Icon(
+                    Icons.email,
+                    size: 20,
+                    color: Color(0xff6C5ECF),
+                  ),
                   SizedBox(
                     width: 10,
                   ),
@@ -78,7 +85,7 @@ class LoginPage extends StatelessWidget {
 
     Widget passTitle() {
       return Container(
-        margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+        margin: const EdgeInsets.only(left: 30, right: 30, bottom: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -86,6 +93,7 @@ class LoginPage extends StatelessWidget {
               'Password',
               style: GoogleFonts.poppins(
                 fontSize: 18,
+                color: primaryText,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -97,11 +105,15 @@ class LoginPage extends StatelessWidget {
               height: 50,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Colors.grey[300],
+                color: Colors.white,
               ),
               child: Row(
                 children: const [
-                  Icon(Icons.security_rounded),
+                  Icon(
+                    Icons.security_rounded,
+                    size: 20,
+                    color: Color(0xff6C5ECF),
+                  ),
                   SizedBox(
                     width: 10,
                   ),
@@ -124,10 +136,10 @@ class LoginPage extends StatelessWidget {
     Widget btnSignIn() {
       return Container(
         margin: const EdgeInsets.only(top: 30, bottom: 10),
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 30),
         child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: Colors.greenAccent,
+              primary: primaryColor,
             ),
             onPressed: () {},
             child: Container(
@@ -150,20 +162,24 @@ class LoginPage extends StatelessWidget {
         children: [
           Text(
             'Belum mempunyai akun?',
-            style: GoogleFonts.poppins(),
+            style: GoogleFonts.poppins(
+              color: primaryText,
+            ),
           ),
           TextButton(
               onPressed: () => Navigator.pushNamed(context, '/register'),
               child: Text(
                 'Register',
-                style: GoogleFonts.poppins(),
+                style: GoogleFonts.poppins(
+                  color: secondaryColor,
+                ),
               ))
         ],
       ));
     }
 
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: bgColor,
       body: ListView(
         children: [
           header(),
