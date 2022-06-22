@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:suka_healing/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:suka_healing/widgets/arrivals_card.dart';
+import 'package:suka_healing/widgets/product_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -75,7 +77,7 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 padding:
-                const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                 margin: EdgeInsets.only(left: 12),
                 decoration: BoxDecoration(
                   color: Colors.transparent,
@@ -95,7 +97,7 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 padding:
-                const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                 margin: EdgeInsets.only(left: 12),
                 decoration: BoxDecoration(
                   color: Colors.transparent,
@@ -115,7 +117,7 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 padding:
-                const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                 margin: EdgeInsets.only(left: 12),
                 decoration: BoxDecoration(
                   color: Colors.transparent,
@@ -135,7 +137,7 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 padding:
-                const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                 margin: EdgeInsets.only(left: 12),
                 decoration: BoxDecoration(
                   color: Colors.transparent,
@@ -159,12 +161,75 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget popularTitle() {
+      return Container(
+        margin: const EdgeInsets.only(left: 30, top: 30),
+        child: Text(
+          'Popular Places',
+          style: GoogleFonts.poppins(
+            fontSize: 22,
+            color: primaryText,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      );
+    }
+
+    Widget popularProduct() {
+      return Container(
+        margin: EdgeInsets.only(top: 20),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: const [
+              SizedBox(
+                width: 30,
+              ),
+              ProductCard(),
+              ProductCard(),
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget newArrivalTitle() {
+      return Container(
+        margin: const EdgeInsets.only(left: 30, top: 30),
+        child: Text(
+          'New Arrivals',
+          style: GoogleFonts.poppins(
+            fontSize: 22,
+            color: primaryText,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      );
+    }
+
+    Widget newArrivalCard() {
+      return Container(
+        margin: EdgeInsets.only(top: 14),
+        padding: EdgeInsets.symmetric(horizontal: 30),
+        child: Column(
+          children: [
+            ArrivalCard(),
+            ArrivalCard(),
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: bgColor,
       body: ListView(
         children: [
           header(),
           categoryList(),
+          popularTitle(),
+          popularProduct(),
+          newArrivalTitle(),
+          newArrivalCard(),
         ],
       ),
     );
