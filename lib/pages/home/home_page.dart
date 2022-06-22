@@ -47,11 +47,124 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget categoryList() {
+      return Container(
+        margin: const EdgeInsets.only(top: 30),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              const SizedBox(
+                width: 30,
+              ),
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                decoration: BoxDecoration(
+                  color: primaryColor,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Center(
+                  child: Text(
+                    'All Place',
+                    style: GoogleFonts.poppins(
+                      color: primaryText,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                padding:
+                const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                margin: EdgeInsets.only(left: 12),
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: secondaryText,
+                  ),
+                ),
+                child: Center(
+                  child: Text(
+                    'Pantai',
+                    style: GoogleFonts.poppins(
+                      color: secondaryText,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                padding:
+                const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                margin: EdgeInsets.only(left: 12),
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: secondaryText,
+                  ),
+                ),
+                child: Center(
+                  child: Text(
+                    'Air Terjun',
+                    style: GoogleFonts.poppins(
+                      color: secondaryText,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                padding:
+                const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                margin: EdgeInsets.only(left: 12),
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: secondaryText,
+                  ),
+                ),
+                child: Center(
+                  child: Text(
+                    'Bukit',
+                    style: GoogleFonts.poppins(
+                      color: secondaryText,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                padding:
+                const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                margin: EdgeInsets.only(left: 12),
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: secondaryText,
+                  ),
+                ),
+                child: Center(
+                  child: Text(
+                    'Danau',
+                    style: GoogleFonts.poppins(
+                      color: secondaryText,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: bgColor,
       body: ListView(
         children: [
           header(),
+          categoryList(),
         ],
       ),
     );
