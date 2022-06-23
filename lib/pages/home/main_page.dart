@@ -17,7 +17,7 @@ class _MainPagesState extends State<MainPages> {
   Widget build(BuildContext context) {
     Widget btnExplore() {
       return FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => Navigator.pushNamed(context, '/chat-room'),
         child: Icon(Icons.comment_rounded),
         backgroundColor: primaryColor,
       );

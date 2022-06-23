@@ -43,6 +43,11 @@ class HomePage extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: primaryColor,
               ),
+              child: const Icon(
+                Icons.person,
+                size: 22,
+                color: Colors.white,
+              ),
             ),
           ],
         ),
