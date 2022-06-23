@@ -36,17 +36,20 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              width: 50,
-              height: 50,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: primaryColor,
-              ),
-              child: const Icon(
-                Icons.person,
-                size: 22,
-                color: Colors.white,
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: primaryColor,
+                ),
+                child: const Icon(
+                  Icons.person,
+                  size: 22,
+                  color: Colors.white,
+                ),
               ),
             ),
           ],

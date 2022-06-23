@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:suka_healing/pages/auth/login_page.dart';
 import 'package:suka_healing/pages/auth/register_page.dart';
+import 'package:suka_healing/pages/chats/detail_chat_page.dart';
 import 'package:suka_healing/pages/chats/main_chat.dart';
 import 'package:suka_healing/pages/home/main_page.dart';
 import 'package:suka_healing/pages/splash_page.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/register': (context) => const RegisterPage(),
         '/main': (context) => const MainPages(),
         '/chat-room': (context) => const MainChat(),
+        '/chat-detail': (context) => const DetailChatPage(),
       },
     );
   }

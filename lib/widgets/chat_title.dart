@@ -7,64 +7,70 @@ class ChatTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(top: 25),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Container(
-                width: 54,
-                height: 54,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: primaryColor,
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, '/chat-detail'),
+      child: Container(
+        margin: const EdgeInsets.only(top: 25),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 54,
+                  height: 54,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: primaryColor,
+                  ),
+                  child: const Icon(
+                    Icons.person,
+                    color: Colors.white,
+                  ),
                 ),
-                child: const Icon(
-                  Icons.person,
-                  color: Colors.white,
+                const SizedBox(
+                  width: 12,
                 ),
-              ),
-              const SizedBox(
-                width: 12,
-              ),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Pantai Karang Bolong',
-                      style: GoogleFonts.poppins(
-                        fontSize: 15,
-                        color: primaryText,
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Guide Curug Cikaso',
+                        style: GoogleFonts.poppins(
+                          fontSize: 15,
+                          color: primaryText,
+                        ),
                       ),
-                    ),
-                    Text(
-                      'Halo, selamat siang saya ingin adfafadfa dfsfsadf sdfasfas',
-                      style: GoogleFonts.poppins(
-                        color: secondaryText,
+                      Text(
+                        'Halo, selamat siang saya ingin adfafadfa dfsfsadf sdfasfas',
+                        style: GoogleFonts.poppins(
+                          color: secondaryText,
+                        ),
+                        overflow: TextOverflow.ellipsis,
                       ),
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              const SizedBox(
-                width: 8,
-              ),
-              Text(
-                'Now',
-                style: GoogleFonts.poppins(
-                  color: secondaryText,
+                const SizedBox(
+                  width: 8,
                 ),
-              ),
-            ],
-          ),
-          Divider(
-            thickness: 1,
-            color: Colors.grey[600],
-          ),
-        ],
+                Text(
+                  'Now',
+                  style: GoogleFonts.poppins(
+                    color: secondaryText,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Divider(
+              thickness: 1,
+              color: Colors.grey[600],
+            ),
+          ],
+        ),
       ),
     );
   }
