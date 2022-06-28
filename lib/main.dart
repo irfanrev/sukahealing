@@ -5,7 +5,9 @@ import 'package:suka_healing/pages/auth/register_page.dart';
 import 'package:suka_healing/pages/chats/detail_chat_page.dart';
 import 'package:suka_healing/pages/chats/main_chat.dart';
 import 'package:suka_healing/pages/home/main_page.dart';
+import 'package:suka_healing/pages/product_page.dart';
 import 'package:suka_healing/pages/splash_page.dart';
+import 'package:suka_healing/pages/wishlist/wishlist_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
         '/main': (context) => const MainPages(),
         '/chat-room': (context) => const MainChat(),
         '/chat-detail': (context) => const DetailChatPage(),
+        '/wishlist': (context) => const WishlistPage(),
+        '/product': (context) => const ProductPage(),
       },
     );
   }

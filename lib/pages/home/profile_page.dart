@@ -93,6 +93,42 @@ class ProfilePage extends StatelessWidget {
       );
     }
 
+    Widget wishlist() {
+      return GestureDetector(
+        onTap: () => Navigator.pushNamed(context, '/wishlist'),
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+          margin: const EdgeInsets.only(
+            left: 30,
+            right: 30,
+            top: 20,
+          ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: secondaryText),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Wishlist',
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  color: primaryText,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              const Icon(
+                Icons.favorite_border_rounded,
+                color: Colors.white,
+                size: 20,
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     Widget btnLogout() {
       return Container(
         margin: const EdgeInsets.only(top: 40),
@@ -126,6 +162,7 @@ class ProfilePage extends StatelessWidget {
       body: ListView(
         children: [
           avatarProfile(),
+          wishlist(),
           profiling(),
           btnLogout(),
         ],
