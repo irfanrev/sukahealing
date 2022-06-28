@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         '/chat-room': (context) => const MainChat(),
         '/chat-detail': (context) => const DetailChatPage(),
         '/wishlist': (context) => const WishlistPage(),
-        '/product': (context) => const ProductPage(),
+        '/product': (context) => ProductPage(),
       },
     );
   }
